@@ -1,0 +1,82 @@
+[
+  {
+    "query": "I need to add a new screen to my Flutter app that shows a list of notifications. The user should be able to tap each one to see details. The data comes from our REST API at /api/v1/notifications",
+    "should_trigger": true
+  },
+  {
+    "query": "the BlocBuilder in my profile screen is rebuilding the entire page every time the user's avatar URL changes, it's making the scroll janky. can you fix screen_profile.dart?",
+    "should_trigger": true
+  },
+  {
+    "query": "I have a Freezed model for Order but I need to add a helper that calculates the estimated delivery date based on the shipping method and order date. Where should this logic go?",
+    "should_trigger": true
+  },
+  {
+    "query": "can you refactor this widget? it's like 400 lines and has a bunch of nested BlocBuilders, it's getting really hard to follow. file is lib/home/ui/screens/screen_home.dart",
+    "should_trigger": true
+  },
+  {
+    "query": "I need to connect a new endpoint POST /api/v1/bookings to my Flutter app. The request body has a date, time, and service_id. Response returns a Booking object with id, status, and confirmation_code",
+    "should_trigger": true
+  },
+  {
+    "query": "my cubit is calling the API but the loading state isn't showing, it just jumps from the old data to the new data. I think the emit might be wrong. here's my fetch method in search_cubit.dart",
+    "should_trigger": true
+  },
+  {
+    "query": "add a bottom sheet that lets users pick a color theme. should have like 8 color options in a grid and save the selection. we use shared_preferences for local storage",
+    "should_trigger": true
+  },
+  {
+    "query": "i want to create a reusable card component that we can use across multiple features - it needs to handle an image, title, subtitle, and an optional badge. some cards are tappable, some aren't",
+    "should_trigger": true
+  },
+  {
+    "query": "fix the dart analysis warnings in lib/shared/utils/date_formatter.dart, there are some unused imports and a missing return type",
+    "should_trigger": true
+  },
+  {
+    "query": "I'm writing a new StatefulWidget for an animated onboarding carousel with 4 pages, each page has a lottie animation and some text. need page indicators at the bottom",
+    "should_trigger": true
+  },
+  {
+    "query": "I need to set up a new PostgreSQL table for storing user preferences with columns for theme, language, and notification settings. Can you write the migration?",
+    "should_trigger": false
+  },
+  {
+    "query": "write me a python script that reads a CSV file of customer orders and generates a summary report with totals by category. the csv has columns: order_id, customer_name, category, amount, date",
+    "should_trigger": false
+  },
+  {
+    "query": "I'm building a React Native app and need to set up Redux state management with async thunks for API calls. Can you scaffold the store and a sample slice?",
+    "should_trigger": false
+  },
+  {
+    "query": "can you help me write a SwiftUI view that shows a scrollable list of items fetched from an API? I'm using Combine for the networking layer",
+    "should_trigger": false
+  },
+  {
+    "query": "I need to optimize my Supabase RLS policies, the queries on the orders table are getting slow with row-level security enabled. here are my current policies",
+    "should_trigger": false
+  },
+  {
+    "query": "help me set up a CI/CD pipeline with GitHub Actions for my mobile app. it needs to run tests, build for both platforms, and deploy to TestFlight and Play Store internal track",
+    "should_trigger": false
+  },
+  {
+    "query": "I'm working on a Kotlin Multiplatform project and need to share networking code between Android and iOS. Should I use Ktor or Retrofit?",
+    "should_trigger": false
+  },
+  {
+    "query": "write a bash script that watches a directory for new .json files, validates them against a schema, and moves valid ones to a processed/ folder",
+    "should_trigger": false
+  },
+  {
+    "query": "I need to build a REST API with Node.js and Express that has CRUD endpoints for a blog. It should use MongoDB with Mongoose for the data layer",
+    "should_trigger": false
+  },
+  {
+    "query": "can you help me debug this Jetpack Compose layout? the LazyColumn items are overlapping when I add a sticky header, and the bottom padding isn't working right",
+    "should_trigger": false
+  }
+]
