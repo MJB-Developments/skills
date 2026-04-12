@@ -2,21 +2,14 @@
 
 Custom Claude Code skills.
 
-## Install a single skill
+## Install a skill
 
 ```bash
-# Clone just one skill into your Claude Code skills directory
-git clone --filter=blob:none --sparse https://github.com/<you>/skills.git /tmp/skills-repo
-cd /tmp/skills-repo
-git sparse-checkout set flutter-arch
-cp -R flutter-arch ~/.agents/skills/flutter-arch
-rm -rf /tmp/skills-repo
-```
+# Install all skills
+npx skills add github.com/michaeljajou/skills
 
-Or use a simple install script:
-
-```bash
-./install.sh flutter-arch
+# Install a single skill
+npx skills add github.com/michaeljajou/skills --skill flutter-arch
 ```
 
 ## Available Skills
