@@ -13,12 +13,10 @@ npx skills add github.com/michaeljajou/skills --skill <skill-name>
 
 # Examples
 npx skills add github.com/michaeljajou/skills --skill flutter-arch
-npx skills add github.com/michaeljajou/skills --skill flutter-linear-workflow
 ```
 
 ## Available Skills
 
-| Skill | Description |
-|-------|-------------|
+| Skill          | Description                                                   |
+| -------------- | ------------------------------------------------------------- |
 | `flutter-arch` | Flutter architecture patterns, BLoC/Cubit, widget composition |
-| `flutter-linear-workflow` | End-to-end SOP for Flutter feature work: Linear projects, 4-phase milestones, branch strategy, subagent dispatch, review gates |
