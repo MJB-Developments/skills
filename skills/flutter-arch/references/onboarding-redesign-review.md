@@ -43,6 +43,8 @@ Use this as an extra checklist when reviewing Flutter PRs that redesign onboardi
    - Preserve the exact product copy from the reference unless there is a concrete platform/product reason to change it; if copy must change, call it out explicitly in the PR.
    - Map design containers to existing project widgets first. In this codebase, prefer `GradientScaffold` for gradient-backed screens instead of wrapping a `Scaffold` in `DecoratedBox`/`Container`, and use `FooterContainer` for bottom button/footer regions because it owns safe-area/footer treatment.
    - If a design section is intentionally deferred (for example an app bar or progress treatment), keep the Flutter placeholder minimal (`AppBar()` when requested) rather than shipping a custom substitute.
+   - Before declaring a referenced artifact inaccessible, inspect the current Slack/session payload and local downloaded attachment cache (for example `/opt/data/slack_attachments/...` and matching session JSON/log entries). In Slack threads, the artifact may arrive as an attached TSX/HTML file rather than a repo file or PR comment.
+   - If the referenced HTML/design artifact is still not accessible after checking repo, session context, and attachment cache, say that explicitly and do not claim full visual/copy parity. Fix concrete review comments immediately, then ask for/upload access to the artifact before doing the strict parity pass.
 
 ## Review output guidance
 
