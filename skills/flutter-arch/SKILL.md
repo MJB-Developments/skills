@@ -19,6 +19,10 @@ This skill defines how to write Flutter code. Every piece of Flutter code — wh
 | Building widgets or screens           | `references/widget-patterns.md`     |
 | Adding API endpoints or data models   | `references/api-layer.md`           |
 | Following task checklists             | `references/checklists.md`          |
+| Setting up Flutter/Dart for analysis  | `references/flutter-sdk-analyzer-environment.md` |
+| Re-skinning a cloned/sibling app      | `references/cloned-app-redesigns.md` |
+| Reviewing onboarding/rebrand PRs      | `references/onboarding-redesign-review.md` |
+| Case study: Snore Log onboarding redesign | `references/snore-log-onboarding-redesign.md` |
 | Updating this skill itself            | `references/contributing.md`        |
 
 ---
@@ -97,6 +101,13 @@ Per-component theme classes feed into `ThemeApp.build()`:
 
 Always use these theme references. Never hardcode colors or text styles.
 
+When adapting a cloned/sibling app to a new design system, update the theme layer before touching individual widgets:
+
+1. Extract the new palette into primitive colors.
+2. Remap semantic colors (`content*`, `background*`, `border*`, `button*`, gradients) to the new brand while keeping semantic field names stable.
+3. Tune existing component themes (buttons, app bars, inputs, tiles, sheets) so feature widgets can keep using native Flutter widgets with little/no per-widget styling.
+4. Only add widget-level styling for genuinely page-specific layouts. Avoid scattering design-system colors across feature widgets.
+
 ---
 
 ## Code Generation
@@ -108,3 +119,13 @@ dart run build_runner build --delete-conflicting-outputs
 ```
 
 Generated files (`.freezed.dart`, `.g.dart`) are committed to source control. Include the `part` directives and `fromJson` factory when creating new Freezed classes.
+
+## Analyzer Environment
+
+For Flutter/Dart work, `dart analyze` is the default verification step. If Flutter/Dart is missing from the Hermes environment, install the SDK persistently outside the project checkout and verify analyzer execution before making code changes. See `references/flutter-sdk-analyzer-environment.md` for the known-good setup and cleanup pitfalls.
+
+---
+
+## Source
+
+Maintained at https://github.com/MJB-Developments/skills (skills/flutter-arch). Owner: Mike. Sync changes back upstream.

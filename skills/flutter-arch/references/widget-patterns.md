@@ -248,6 +248,8 @@ Keep widget files focused and manageable. When a widget's build method grows com
 1. **Separate files** — when a sub-widget is reusable, testable on its own, or substantial enough to warrant its own file, extract it into `components/`. Reusability and abstraction at the widget level is always preferred.
 2. **Separate functions** — when splitting into a separate file would be overkill (small, single-use subtrees), extract a private method that returns a `Widget` within the same class. These widget-returning functions belong at the widget level since they produce UI.
 
+For enum-driven page flows like onboarding, the top-level `Page*` widget should stay thin: it should only read the state it needs and route/switch to page-specific widgets. Each individual page body belongs in its own `page_*` file, and reusable visual primitives belong in focused component files. Do not let the router widget accumulate the full implementation for every onboarding page.
+
 The goal is readability: a developer should be able to understand a widget's structure at a glance without scrolling through hundreds of lines.
 
 ---
