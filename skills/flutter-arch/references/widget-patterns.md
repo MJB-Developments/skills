@@ -220,6 +220,10 @@ QuestionPage(title: Text('3/10', style: TextStyle(color: Colors.red)))
 
 **Enum-driven sections** — for screens with many conditional sections (like a home feed), define a `SectionType` enum and switch on it. Each enum value maps to a widget. Sections that have no data return `SizedBox.shrink()`.
 
+Prefer traditional `switch`/`case` statements over Dart switch expressions for enum-driven widget routing or state-derived lists. Mike has called out `return switch (...) { ... }` / `final x = switch (...) { ... }` as less preferred in this codebase; keep the explicit case structure unless there is a strong reason not to.
+
+Use trailing commas for multiline widget constructors and argument lists. If a constructor call wraps to multiple lines, put one argument per line with a trailing comma so `dart format` produces readable diffs.
+
 **No private widget classes** — never define private `_SomeWidget extends StatelessWidget` inside a file. Instead, either:
 
 1. Extract the widget into its own file in `components/` (preferred for anything reusable or substantial)
