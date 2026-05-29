@@ -17,6 +17,7 @@ npx skills add github.com/michaeljajou/skills --skill flutter-arch
 
 ## Available Skills
 
-| Skill          | Description                                                   |
-| -------------- | ------------------------------------------------------------- |
-| `flutter-arch` | Flutter architecture patterns, BLoC/Cubit, widget composition |
+| Skill                | Description                                                   |
+| -------------------- | ------------------------------------------------------------- |
+| `docker-permissions` | Hermes Agent Docker `/opt/data` UID/GID permission repairs    |
+| `flutter-arch`       | Flutter architecture patterns, BLoC/Cubit, widget composition |
